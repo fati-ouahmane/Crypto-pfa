@@ -1,0 +1,76 @@
+[33mcommit 2e2fa6e37adfe9ea8db271e770d21008bf442bfd[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: fatima ezzahra <ouahmane.zahraa@gmail.com>
+Date:   Sat Jun 3 14:08:18 2023 +0100
+
+    Revert "Merge pull request #4 from fati-ouahmane/oussama"
+    
+    This reverts commit 86a30dd4a3d662258cd7b5e9b52bf13bc852a73a, reversing
+    changes made to e4890faa5a4024e729b2980d9e838a9a40928982.
+
+[33mcommit 86a30dd4a3d662258cd7b5e9b52bf13bc852a73a[m[33m ([m[1;31morigin/master[m[33m)[m
+Merge: e4890fa f3ffcc3
+Author: fati-ouahmane <103949048+fati-ouahmane@users.noreply.github.com>
+Date:   Sat Jun 3 13:40:04 2023 +0100
+
+    Merge pull request #4 from fati-ouahmane/oussama
+    
+    Oussama
+
+[33mcommit f3ffcc36eb03342138ad07e89e640df02d0a5f12[m
+Merge: c08ada5 e4890fa
+Author: fati-ouahmane <103949048+fati-ouahmane@users.noreply.github.com>
+Date:   Sat Jun 3 13:39:39 2023 +0100
+
+    Merge pull request #3 from fati-ouahmane/master
+    
+    fati
+
+[33mcommit e4890faa5a4024e729b2980d9e838a9a40928982[m
+Merge: 033360e 419202a
+Author: fati-ouahmane <103949048+fati-ouahmane@users.noreply.github.com>
+Date:   Sat Jun 3 13:00:56 2023 +0100
+
+    Merge pull request #2 from fati-ouahmane/fati
+    
+    Merge pull request #1 from fati-ouahmane/master
+
+[33mcommit 419202a84a15d23e91447d35cca1c248e6be0a6b[m[33m ([m[1;31morigin/fati[m[33m)[m
+Merge: b040559 033360e
+Author: fati-ouahmane <103949048+fati-ouahmane@users.noreply.github.com>
+Date:   Sat Jun 3 13:00:31 2023 +0100
+
+    Merge pull request #1 from fati-ouahmane/master
+    
+    Update README.md
+
+[33mcommit c08ada5449f21d68c6f305fcb499b31009dcdb9c[m
+Author: oussamarhouch <oussamarhouch@gmail.com>
+Date:   Sat Jun 3 11:05:16 2023 +0100
+
+    front in client, back in server + auth pages need design
+
+[33mcommit c0159730d76f6ef25eddba853865c549b4de76ea[m
+Author: oussamarhouch <oussamarhouch@gmail.com>
+Date:   Sat Jun 3 10:42:41 2023 +0100
+
+    first
+
+[33mcommit 033360eb03472b531bb3a9c06d8d87c6034a7e2d[m
+Author: fati-ouahmane <103949048+fati-ouahmane@users.noreply.github.com>
+Date:   Fri Jun 2 14:46:29 2023 +0100
+
+    Update README.md
+    
+    H
+
+[33mcommit b040559764e6a26d86f9cb9f0cc99731614baac8[m[33m ([m[1;32mfati[m[33m)[m
+Author: fatima ezzahra <ouahmane.zahraa@gmail.com>
+Date:   Wed May 31 18:16:10 2023 +0100
+
+    initial
+
+[33mcommit 78233161d1795b86b5a06a8b53f3af166e4c802f[m
+Author: fatima ezzahra <ouahmane.zahraa@gmail.com>
+Date:   Wed May 31 16:27:39 2023 +0100
+
+    app
