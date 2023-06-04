@@ -10,13 +10,18 @@ import 'package:provider/provider.dart';
 
 
 class BottomBarView extends StatelessWidget {
-  BottomBarView({super.key});
+  final String token;
 
-  final List<Widget> pages = [
-    const MarketView(),
-    const WalletView(),
-    const ProfileView(),
-  ];
+  BottomBarView({required this.token, Key? key}) : super(key: key) {
+    // Initialize the pages list using the token
+    pages = [
+      MarketView(),
+      WalletView(),
+      ProfileView(token: token),
+    ];
+  }
+
+  late List<Widget> pages;
 
   @override
   Widget build(BuildContext context) {

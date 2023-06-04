@@ -16,31 +16,55 @@ class _ProfileCard extends StatelessWidget {
           return Text('Error: ${snapshot.error}');
         } else if (snapshot.hasData) {
           Profile profileData = snapshot.data!;
-          return Card(
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Username: ${profileData.username}',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          return Positioned(
+            top: 30,
+            left: 20,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Icon(
+                      Icons.account_circle,
+                      size: 60,
+                      color: Color(0xFF282159),
+                    ),
+                    const SizedBox(width: 5),
+                    Text(
+                      'Hello, ${profileData.username}',
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 20),
+                Text(
+                  'Name',
+                  style: TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w500,
+                    color: Color(0xFF59709D),
                   ),
-                  SizedBox(height: 8),
-                  Text(
-                    'Name: ${profileData.name}',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  '${profileData.name}',
+                  style: const TextStyle(
+                    fontSize: 32,
+                    letterSpacing: 2,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.white,
                   ),
-                  SizedBox(height: 8),
-                  Text(
-                    'Email: ${profileData.email}',
-                    style: TextStyle(fontSize: 14),
-                  ),
-                  SizedBox(height: 8),
-                ],
-              ),
-            ),
-          );
+                ),
+                const SizedBox(height: 15),
+
+
+                  ],
+                ),);
+
+
         } else {
           // Handle the case when there is no data
           return Text('No profile data available');

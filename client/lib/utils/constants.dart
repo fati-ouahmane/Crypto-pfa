@@ -6,7 +6,7 @@ class DurationConstants extends Duration {
 }
 
 const ImageProvider<Object> onBoardingBackgroundImage =
-    AssetImage("assets/images/backgorund.png");
+    AssetImage("assets/images/back.PNG");
 
 const TextStyle onBoardTitle = TextStyle(
     fontWeight: FontWeight.bold,

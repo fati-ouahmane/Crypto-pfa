@@ -21,11 +21,14 @@ class _OnBoardingView1State extends State<OnBoardingView1> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Expanded(
-              child: Image.asset(
+              child: Container(
+                width: 500.0, // Set the desired width
+                height: 500.0,
+                child: Image.asset(
                 'assets/images/logofinal.png',
                 fit: BoxFit.cover,
               ),
-            ),
+            ),),
             const Text(
               'Build your future',
               style: onBoardTitle,

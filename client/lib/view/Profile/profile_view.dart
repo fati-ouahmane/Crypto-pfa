@@ -15,7 +15,9 @@ part 'components/grid_view.dart';
 part 'components/profile_card.dart';
 
 class ProfileView extends StatefulWidget {
-  const ProfileView({super.key});
+
+  final String token;
+  const ProfileView({Key? key, required this.token}) : super(key: key);
 
   @override
   State<ProfileView> createState() => _ProfileViewState();
@@ -27,7 +29,7 @@ class _ProfileViewState extends State<ProfileView>  {
   @override
   void initState() {
     super.initState();
-    _profileFuture = ProfileService().fetchProfile();
+    _profileFuture = ProfileService().fetchProfile(widget.token);
   }
 
   @override
@@ -60,15 +62,15 @@ class _ProfileViewState extends State<ProfileView>  {
                                         child: Stack(
                                           children: [
                                             _backdropFilter(),
-                                           _ProfileCard(
-                                                profile: _profileFuture,
-                                                ),
+                                            _ProfileCard(
+                                              profile: _profileFuture,
+                                            ),
                                           ],
                                         )),
 
                                     _assetsLabel(walletViewModel),
                                     const SizedBox(
-                                      height: 10,
+                                      height: 25,
                                     ),
                                     _GridView(walletViewModel: walletViewModel),
                                   ],
@@ -120,7 +122,5 @@ class _ProfileViewState extends State<ProfileView>  {
       ),
     );
   }
-
-
 
 }

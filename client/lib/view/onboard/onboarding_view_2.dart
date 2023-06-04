@@ -28,6 +28,7 @@ class _OnBoardingView2State extends State<OnBoardingView2>
               fit: BoxFit.cover,
             ),
           ),
+
           const Text("Encrypted Wallet",
               style: onBoardTitle),
           const SizedBox(
