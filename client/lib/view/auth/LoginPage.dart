@@ -73,39 +73,79 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      appBar: AppBar(
-        title: Text('Login'),
-      ),
       body: Container(
         padding: EdgeInsets.all(16.0),
         color: Color(0xFF180c34), // Setting the background color to black
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Container(
+              width: 350.0, // Set the desired width
+              height: 350.0, // Set the desired height
+              child: Image.asset(
+                'assets/images/login.png',
+                fit: BoxFit
+                    .contain, // Maintain the aspect ratio and fit within the container
+              ),
+            ),
             TextField(
               controller: _usernameController,
+              style: TextStyle(color: Colors.white), // Set text color to white
               decoration: InputDecoration(
                 labelText: 'Username',
+                labelStyle:
+                    TextStyle(color: Colors.white), // Set label color to white
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                      color: Colors
+                          .white), // Set border color to white when focused
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                      color: Colors
+                          .white), // Set border color to white when not focused
+                ),
               ),
             ),
             SizedBox(height: 16.0),
             TextField(
               controller: _passwordController,
               obscureText: true,
+              style: TextStyle(color: Colors.white), // Set text color to white
               decoration: InputDecoration(
                 labelText: 'Password',
+                labelStyle:
+                    TextStyle(color: Colors.white), // Set label color to white
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                      color: Colors
+                          .white), // Set border color to white when focused
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                      color: Colors
+                          .white), // Set border color to white when not focused
+                ),
               ),
             ),
             SizedBox(height: 24.0),
             _isLoading
                 ? CircularProgressIndicator()
                 : ElevatedButton(
-                    child: Text('Login'),
+                    child: Text('Login',
+                        style: TextStyle(
+                            color: Colors
+                                .white)), // Set button text color to white
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xFF7c94f9), // Set button background color
+                    ),
                     onPressed: _login,
                   ),
             SizedBox(height: 16.0),
             TextButton(
-              child: Text("Don't have an account? Sign Up"),
+              child: Text("Don't have an account? Sign Up",
+                  style: TextStyle(
+                      color: Colors.white)), // Set text color to white
               onPressed: _goToRegisterPage,
             ),
           ],

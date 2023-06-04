@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'LoginPage.dart';
+import 'package:crypto_app/view/bottom_bar_view.dart';
 
 class RegisterPage extends StatefulWidget {
   @override
@@ -43,7 +44,7 @@ class _RegisterPageState extends State<RegisterPage> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => LoginPage(),
+            builder: (context) => BottomBarView(),
           ),
         );
       } else {
@@ -83,52 +84,123 @@ class _RegisterPageState extends State<RegisterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      appBar: AppBar(
-        title: Text('Login'),
-      ),
       body: Container(
         padding: EdgeInsets.all(16.0),
+        color: Color(0xFF180c34), // Set the background color to black
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Container(
+              width: 250.0, // Set the desired width
+              height: 250.0, // Set the desired height
+              child: Padding(
+                padding: EdgeInsets.only(
+                    top: 30.0), // Adjust the top padding value as needed
+                child: Image.asset(
+                  'images/register.png',
+                  fit: BoxFit
+                      .contain, // Maintain the aspect ratio and fit within the container
+                ),
+              ),
+            ),
             TextField(
               controller: _usernameController,
+              style: TextStyle(color: Colors.white), // Set text color to white
               decoration: InputDecoration(
                 labelText: 'Username',
+                labelStyle:
+                    TextStyle(color: Colors.white), // Set label color to white
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                      color: Colors
+                          .white), // Set border color to white when focused
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                      color: Colors
+                          .white), // Set border color to white when not focused
+                ),
               ),
             ),
             SizedBox(height: 16.0),
             TextField(
               controller: _nameController,
+              style: TextStyle(color: Colors.white), // Set text color to white
               decoration: InputDecoration(
                 labelText: 'Name',
+                labelStyle:
+                    TextStyle(color: Colors.white), // Set label color to white
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                      color: Colors
+                          .white), // Set border color to white when focused
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                      color: Colors
+                          .white), // Set border color to white when not focused
+                ),
               ),
             ),
             SizedBox(height: 16.0),
             TextField(
               controller: _emailController,
+              style: TextStyle(color: Colors.white), // Set text color to white
               decoration: InputDecoration(
                 labelText: 'Email',
+                labelStyle:
+                    TextStyle(color: Colors.white), // Set label color to white
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                      color: Colors
+                          .white), // Set border color to white when focused
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                      color: Colors
+                          .white), // Set border color to white when not focused
+                ),
               ),
             ),
             SizedBox(height: 16.0),
             TextField(
               controller: _passwordController,
               obscureText: true,
+              style: TextStyle(color: Colors.white), // Set text color to white
               decoration: InputDecoration(
                 labelText: 'Password',
+                labelStyle:
+                    TextStyle(color: Colors.white), // Set label color to white
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                      color: Colors
+                          .white), // Set border color to white when focused
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                      color: Colors
+                          .white), // Set border color to white when not focused
+                ),
               ),
             ),
             SizedBox(height: 24.0),
             _isLoading
                 ? CircularProgressIndicator()
                 : ElevatedButton(
-                    child: Text('Register'),
+                    child: Text('Register',
+                        style: TextStyle(
+                            color: Colors
+                                .white)), // Set button text color to white
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xFF7c94f9), // Set button background color
+                    ),
                     onPressed: _register,
                   ),
             SizedBox(height: 16.0),
             TextButton(
-              child: Text("Already have an account? Sign In"),
+              child: Text("Already have an account? Sign In",
+                  style: TextStyle(
+                      color: Colors.white)), // Set text color to white
               onPressed: _goToLoginPage,
             ),
           ],
