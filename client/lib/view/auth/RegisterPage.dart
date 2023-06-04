@@ -216,13 +216,26 @@ class _RegisterPageState extends State<RegisterPage> {
               onPressed: _register,
             ),
             SizedBox(height: 16.0),
-            TextButton(
-              child: Text("Already have an account? Sign In",
-                  style: TextStyle(
-                      color: Colors.white)), // Set text color to white
-              onPressed: _goToLoginPage,
-            ),
-          ],
+                Container(
+                    height: 40,
+
+                    decoration: BoxDecoration(
+                      color: Color(0xFFC8E877),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Center(
+                      child: TextButton(
+                        onPressed: _goToLoginPage,
+                      child: Text("Already have an account? Sign In",
+                          style: TextStyle(
+                              color: Color(0xFF0E0E0E)), // Set text color to white
+
+                    ),
+
+                    )
+
+                )
+                ),],
         ),
       ),
     ),),);

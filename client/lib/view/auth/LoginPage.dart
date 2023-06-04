@@ -164,13 +164,27 @@ class _LoginPageState extends State<LoginPage> {
               onPressed: _login,
             ),
             SizedBox(height: 16.0),
-            TextButton(
-              child: Text("Don't have an account? Sign Up",
-                  style: TextStyle(
-                      color: Colors.white)), // Set text color to white
-              onPressed: _goToRegisterPage,
-            ),
-          ],
+
+
+            Container(
+              height: 40,
+
+              decoration: BoxDecoration(
+                color: Color(0xFFC8E877),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Center(
+                child: TextButton(
+                  onPressed: _goToRegisterPage,
+                  child: Text("Don't have an account? Sign Up",
+                      style: TextStyle(
+                          color: Color(0xFF0E0E0E)), // Set text color to white
+
+                ),
+
+            )
+
+            ),),],
         ),
     ),),
       ),
