@@ -25,7 +25,6 @@ class _LoginPageState extends State<LoginPage> {
       'password': _passwordController.text,
     });
     var headers = {'Content-Type': 'application/json'};
-
     try {
       var response = await http.post(url, headers: headers, body: body);
 
@@ -37,8 +36,9 @@ class _LoginPageState extends State<LoginPage> {
 
         // Navigate to the home page or next screen
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => BottomBarView()));
-        ;
+          context,
+          MaterialPageRoute(builder: (context) => BottomBarView()),
+        );
       } else {
         // Handle login failure
         _showSnackBar('Login Failed. Invalid credentials. Please try again.');
@@ -78,6 +78,7 @@ class _LoginPageState extends State<LoginPage> {
       ),
       body: Container(
         padding: EdgeInsets.all(16.0),
+        color: Color(0xFF180c34), // Setting the background color to black
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
