@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardingView extends StatefulWidget {
-  const OnBoardingView({Key? key}) : super(key: key);
+  const OnBoardingView({super.key});
 
   @override
   State<OnBoardingView> createState() => _OnBoardingViewState();
@@ -20,10 +20,9 @@ class _OnBoardingViewState extends State<OnBoardingView> {
         body: Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assets/images/backgorund.png"),
-              fit: BoxFit.cover,
-              colorFilter: ColorFilter.mode(Colors.white, BlendMode.darken),
-            ),
+                image: onBoardingBackgroundImage,
+                fit: BoxFit.cover,
+                colorFilter: ColorFilter.mode(Colors.white, BlendMode.darken)),
           ),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -41,29 +40,25 @@ class _OnBoardingViewState extends State<OnBoardingView> {
 
                 // dot indicator
                 Container(
-                  alignment: const Alignment(0, 0.6),
-                  child: SmoothPageIndicator(
-                    controller: onBoardingViewModel.pageController,
-                    count: 3,
-                    effect: const ExpandingDotsEffect(
-                      activeDotColor: Color(0xFF200E45),
-                      dotColor: Colors.white,
-                      dotHeight: 8,
-                      dotWidth: 16,
-                    ),
-                  ),
-                ),
+                    alignment: const Alignment(0, 0.6),
+                    child: SmoothPageIndicator(
+                      controller: onBoardingViewModel.pageController,
+                      count: 3,
+                      effect: const ExpandingDotsEffect(
+                          activeDotColor: Colors.greenAccent,
+                          dotColor: Colors.white,
+                          dotHeight: 8,
+                          dotWidth: 16),
+                    )),
 
                 onBoardingViewModel.onLastPage
                     ? OnBoardingButton(
-                  onTap: () =>
-                      onBoardingViewModel.navigateToHome(context),
-                  label: "Start trading",
-                )
+                        onTap: () =>
+                            onBoardingViewModel.navigateToLogin(context),
+                        label: "Start trading")
                     : OnBoardingButton(
-                  onTap: () => onBoardingViewModel.nextPage(),
-                  label: "Next",
-                ),
+                        onTap: () => onBoardingViewModel.nextPage(),
+                        label: "Next"),
               ],
             ),
           ),

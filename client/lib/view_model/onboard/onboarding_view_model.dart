@@ -2,6 +2,7 @@ import 'package:crypto_app/view/bottom_bar_view.dart';
 import 'package:crypto_app/view/onboard/onboarding_view_1.dart';
 import 'package:crypto_app/view/onboard/onboarding_view_2.dart';
 import 'package:crypto_app/view/onboard/onboarding_view_3.dart';
+import 'package:crypto_app/view/auth/LoginPage.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingViewModel extends ChangeNotifier {
@@ -28,8 +29,12 @@ class OnBoardingViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  void navigateToHome(BuildContext context) {
+  void navigateToLogin(BuildContext context) {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => BottomBarView()));
+      context,
+      MaterialPageRoute(
+        builder: (context) => LoginPage(),
+      ),
+    );
   }
 }
